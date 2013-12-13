@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Yourself</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel='stylesheet prefetch' href='http://dimsemenov-static.s3.amazonaws.com/dist/magnific-popup.css'>
+	<link rel="stylesheet" href="default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="jquery.nivo.slider.js"></script>
+   
+	<style type="text/css">
+		*
+		{
+			padding:0px;
+			margin:0px;
+		}
+	body
+		{
+			width:100%;
+			height:100%;
+			font-family:century gothic;
+			background-position: center;
+			margin: 0px auto;
+		}
+	#header
+		{
+			background-color:#161616;
+			height:140px;
+			width:100%;
+			min-height:100px;
+			min-width:1300px;
+			background-position: center;
+			margin:0px auto;
+		}
+	#header-group{
+		position: relative;
+		margin: 0px auto;
+		width:90%;
+	}
+	#subheader1
+		{
+			float:left;
+			margin-left:200px;
+			margin-top:20px;
+		}
+	#subheader2
+		{
+			float:right;
+			margin-right:200px;
+			margin-top:12px;
+		}
+	#subheader3
+		{
+			float:right;
+			clear:both;
+			margin-right:200px;
+			margin-top:-35px;
+			font-family:century gothic;
+			font-size:16px;
+		}
+	a
+		{
+			text-decoration:none;
+			color:#FFB107;
+		}
+	.link
+		{
+			padding-left:10px;
+		}
+	.link2
+		{
+			float:right;
+			position:relative;
+			right:70px;
+		}
+	.link3
+		{
+			float:right;
+			position:relative;
+			top:-22px;
+		}
+	#strip
+		{
+			background-color:#282828;
+			height:15px;
+			width:100%;
+			min-width:1300px;
+			margin: 0px auto;
+		}
+	#strip1
+		{
+			background-color:#282828;
+			height:25px;
+			min-width:1300px;
+			margin: 0px auto;
+			width:100%;
+		}
+	#strip2
+		{
+			background-color:#161616;
+			height:25px;
+			min-width:1300px;
+			margin: 0px auto;
+			width:100%;
+		}
+	#image
+		{
+			background-color:#FFB107;
+			height:420px;
+			width:100%;
+			min-width:1300px;
+		}
+	#image-group
+		{
+			margin: 0px auto;
+			position:relative;
+			top:50px;
+		}
+	#content
+		{
+			min-width:1300px;
+			margin:0px auto;
+			width:100%;
+		}
+	#content-group
+		{
+			position: relative;
+			margin: 0px auto;
+			width:90%;
+		}
+	.circle
+		{
+			 width: 150px;
+			height: 150px;
+			-moz-border-radius: 90px;
+			-webkit-border-radius: 90px;
+			border-radius: 90px;
+			border-style:solid;
+			border-width:3px;
+			border-color:#FDFDFD;
+		}
+	#subcontent1
+		{
+			margin-left:200px;
+			float:left;
+			margin-top:-90px;
+		}
+	#subcontent2
+		{
+			margin-left:200px;
+			margin-top:20px;
+			float:left;
+			clear:both;
+			width:550px;
+		}
+	#subcontent3
+		{
+			float:right;
+			margin-right:200px;
+			margin-top:30px;
+			background-color:#0072C6;
+			width:220px;
+			height:50px;
+			border-radius:10px;
+			text-align:center;
+		}
+	.campus
+		{
+			font-size:18px;
+			font-color:white;
+			font-family:Century Gothic;
+			margin-top:15px;
+		}
+	.campus:hover
+		{
+			font-color:white;
+		}
+	#subcontent4
+		{
+			float:right;
+			clear:right;
+			margin-right:170px;
+			margin-top:100px;
+		}
+	#subcontent5
+		{
+			clear:both;
+			width:100%;
+			min-width:1300px;
+			height:200px;
+
+			background:linear-gradient(#FFFFFF,#FDFDFD,#EFEFEF);
+		}
+	#footer
+		{
+			min-width:1300px;
+			margin: 0px auto;
+			width:100%;
+		}
+	#footer-group
+		{
+			position: relative;
+			margin: 0px auto;
+			width:90%;
+		}
+	#subfooter1
+		{
+			float:left;
+			margin-left:200px;
+			margin-bottom:20px;
+		}
+	#subfooter2
+		{
+			float:right;
+			margin-right:200px;
+			margin-bottom:20px;
+			color:grey;
+		}
+	.white-popup
+		{
+			  position: relative;
+			  background: #FFF;
+			  padding: 25px;
+			  width: auto;
+			  max-width: 400px;
+			  margin: 0 auto;
+		}
+	.white-popup1 
+		{
+			  position: relative;
+			  background: #FFF;
+			  padding: 25px;
+			  width: 250px;
+			  max-width: 400px;
+			  position:relative;
+			  left:70%;
+		}
+	#registerinput1
+		{
+			width:175px;
+			height:50px;
+		}
+		input 
+	{
+        font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+        font-size: 14px;
+    }
+	input[type=text], input[type=password] 
+	{
+        margin: 5px;
+		padding: 0 10px;
+		width: 200px;
+		height: 34px;
+		color: #404040;
+		background: white;
+		border: 0px solid;
+		border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+		border-radius: 4px;
+		outline:1px;
+		-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+	input[type=text]:focus, input[type=password]:focus
+	{
+       border-color:#FFB107;
+       outline-color: #FFB107;
+       outline-offset: 0;
+       color: #404040;
+    }
+	
+ #lo
+ {
+  font-family:'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size:20px;
+  position:relative;
+  color:#D2432B;
+   left:8px;
+ }
+		 #box2
+ {
+   height:2px;
+   background-color:#D2432B;
+   width:200px;
+   border-radius:4px;
+    position:relative;
+   left:8px; 
+ }
+#submit1
+{
+  background-color: #E9C11F;
+  border: 1px solid #E9C11F;
+border-bottom: 1px solid #E9C11F;
+border-radius: 3px;
+color: white;
+font-weight: bold;
+padding: 6px 15px;
+text-align: center;
+text-shadow: 0 -1px 0 #396715;
+font-size: 18px;
+font-family: play, Times, "Play", serif;
+}
+#submit1:hover {
+opacity: .85;
+cursor: pointer;
+}
+/* 
+
+====== Zoom effect ======
+
+*/
+.mfp-zoom-in {
+  /* start state */
+  /* animate in */
+  /* animate out */
+}
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  transform: scale(0.8);
+  opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+/* 
+
+====== Move-from-top effect ======
+
+*/
+.mfp-move-from-top {
+  /* start state */
+  /* animate in */
+  /* animate out */
+}
+.mfp-move-from-top .mfp-content {
+  vertical-align: top;
+}
+.mfp-move-from-top .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s;
+  transform: translateY(-100px);
+}
+.mfp-move-from-top.mfp-bg {
+  opacity: 0;
+  transition: all 0.2s;
+}
+.mfp-move-from-top.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mfp-move-from-top.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.mfp-move-from-top.mfp-removing .mfp-with-anim {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+.mfp-move-from-top.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+	</style>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</head>
+<body>
+	<div id="header">
+		<div id='header-group'>
+		<div id="subheader1">
+			<a href="#"><img src="logo.png"></a>
+		</div>
+		<div id="subheader2">
+			<a href="https://www.facebook.com/yourselfchange"><img src="fb.png"></a>
+			<a href="#"><img src="g.png"></a>
+			<a href="#"><img src="tw.png"></a>
+			<a href="#"><img src="yt.png"></a>
+		</div>
+		<div id="subheader3">
+			
+			<a href="index.html" class="link">Home</a>
+			<a href="aboutus.html" class="link">About Us</a>
+			<a href="events.html" class="link">Events</a>
+			<a href="#" class="link">Blog</a>
+			<a href="#" class="link">Forums</a>
+			<div  id="inline-popups1" class="link2">
+				<a href="#contact" data-effect="mfs-zoom-in" class="link">Contact</a>
+			</div>
+			<div id="inline-popups3"class="link3">
+				<a href="#register" data-effect="mfp-move-from-top" class="link">Register</a>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div id="strip"></div>
+	<div id="image">
+		<div id="image-group">
+		<div id="wrapper">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="toystory.jpg" data-thumb="toystory.jpg" alt="" />
+                <img src="up.jpg" data-thumb="up.jpg" alt=""  />
+                <img src="walle.jpg" data-thumb="walle.jpg" alt="" />
+                <img src="nemo.jpg" data-thumb="nemo.jpg" alt=""  />
+            </div>
+        </div>
+        </div>
+    </div>
+	</div>
+	<div id="strip1"></div>
+	<div id="strip2"></div>
+	<div id="content">
+	<div id="content-group">
+		
+		<div id="subcontent2">
+			<h3>Our Mission</h3>
+			<br>
+			<p>"Change Yourself" is a student-run social enterprise which aims at involving students in creating positive social impact. Mission . To provide a platform to the energetic youth of India through which they can bring a change in the society and improve themselves simultaneously. .	To create young leaders with vision and energy for the nation as well as themselves. .	To trendify the education of India by involving students in this field. .	To spread awareness among the people about the general world issues related to economy, science, law, environment, history, sports, polity and business. .	To ensure that any idea which can create a significant impact does not go waste just because that person finds himself alone in his pursuit.</p><p> Description This organisation is run by students of some of the best institutions in the country like IITs, AIIMS, NLIUs, NITs and other institutions of high repute. It centrally works from IIT Kharagpur. However, it is open to people from all regions and age.</p>
+		</div>
+		<div id="subcontent3">
+			<div id="inline-popups2">
+    				<a href="#campuss" data-effect="mfp-zoom-in"><p class="campus">Campus Ambassador</p></a>
+  			</div>
+			
+		</div>
+		<div id="subcontent4">
+			<H3>Up Coming Events</H3>
+			<br>
+			<marquee direction="up" onmouseover=this.stop() onmouseout=this.start() scrollamount="1" scrolldelay="40" width="250" >
+				<h5>Event1</h5>
+				<p>This is the best event change your self is organising.date of the event:20/1/2014</p>
+				<br>
+				<h5>Event2</h5>
+				<p>This is the best event change your self is organising.date of the event:20/1/2014</p>
+			</marquee>
+		</div>
+	</div>
+	</div>
+	<div id="subcontent5">
+	</div>
+	<div id="footer">
+		<div id="footer-group">
+		<div id="subfooter1">
+			<a href="index.html" class="link">Home</a>
+			<a href="aboutus.html" class="link">About Us</a>
+			<a href="#" class="link">Events</a>
+			<a href="#" class="link">Blog</a>
+			<div  id="inline-popups4" class="link2">
+				<a href="#contact" data-effect="mfs-zoom-in" class="link">Contact</a>
+			</div>
+			<div id="inline-popups5"class="link3">
+				<a href="#register" data-effect="mfp-move-from-top" class="link">Register</a>
+			</div>
+		</div>
+		<div id="subfooter2">
+			<p>&copy copyright Change Yourself</p>
+		</div>
+		</div>
+	</div>
+	
+
+  
+
+<div id="campuss" class="white-popup mfp-with-anim mfp-hide">You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</div>
+<div id="contact" class="white-popup mfp-with-anim mfp-hide">You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</div>
+<div id="register" class="white-popup1 mfp-with-anim mfp-hide">
+	<span id="lo">Register</span>
+	<div id="box2"></div>
+	<form>
+		<input type="text"  class="rule"  name="username" id="username" placeholder="Enter Username"/><br/>
+		<input type="password"  class="rule"  name="Emailid" id="password" placeholder="Enter Emailid"/><br/>
+		<button id="submit1">Signin</button>
+	</form>
+</div>
+ <script src='http://dimsemenov-static.s3.amazonaws.com/dist/jquery.magnific-popup.min.js'></script>
+   <script src="index.js"></script>
+  
+</body>
+</html>

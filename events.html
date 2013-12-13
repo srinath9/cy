@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Yourself</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel='stylesheet prefetch' href='http://dimsemenov-static.s3.amazonaws.com/dist/magnific-popup.css'>
+	<link rel="stylesheet" href="default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="jquery.nivo.slider.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+   
+	<style type="text/css">
+		*
+						{
+							padding:0px;
+							margin:0px;
+						}
+					body
+						{
+							width:100%;
+							height:100%;
+							font-family:century gothic;
+							background-position: center;
+							margin: 0px auto;
+						}
+					#header
+						{
+							background-color:#161616;
+							height:140px;
+							width:100%;
+							min-height:100px;
+							min-width:1300px;
+							background-position: center;
+							margin:0px auto;
+						}
+					#header-group{
+						position: relative;
+						margin: 0px auto;
+						width:90%;
+					}
+					#subheader1
+						{
+							float:left;
+							margin-left:200px;
+							margin-top:20px;
+						}
+					#subheader2
+						{
+							float:right;
+							margin-right:200px;
+							margin-top:12px;
+						}
+					#subheader3
+						{
+							float:right;
+							clear:both;
+							margin-right:200px;
+							margin-top:-35px;
+							font-family:century gothic;
+							font-size:16px;
+						}
+					a
+						{
+							text-decoration:none;
+							color:#FFB107;
+						}
+					.link
+						{
+							padding-left:10px;
+						}
+					.link2
+						{
+							float:right;
+							position:relative;
+							right:70px;
+						}
+					.link3
+						{
+							float:right;
+							position:relative;
+							top:-22px;
+						}
+					#strip
+						{
+							background-color:#282828;
+							height:15px;
+							width:100%;
+							min-width:1300px;
+							margin: 0px auto;
+						}
+					#strip1
+						{
+							background-color:#282828;
+							height:25px;
+							min-width:1300px;
+							margin: 0px auto;
+							width:100%;
+						}
+					#strip2
+						{
+							background-color:#161616;
+							height:25px;
+							min-width:1300px;
+							margin: 0px auto;
+							width:100%;
+						}
+					#image
+						{
+							background-color:#FFB107;
+							height:420px;
+							width:100%;
+							min-width:1300px;
+						}
+					#image-group
+						{
+							margin: 0px auto;
+							position:relative;
+							top:50px;
+						}
+					#content
+						{
+							min-width:1300px;
+							margin:0px auto;
+							width:100%;
+						}
+					#content-group
+						{
+							position: relative;
+							margin: 0px auto;
+							width:90%;
+						}
+					.circle
+						{
+							
+							 width: 150px;
+							height: 150px;
+							-moz-border-radius: 4px;
+							-webkit-border-radius: 4px;
+							border-radius: 4px;
+							border-style:solid;
+							border-width:2px;
+							border-color:white;
+						}
+					#subcontent1
+						{
+							margin-left:200px;
+							float:left;
+							margin-top:40px;
+							color:#FFB107;
+						}
+					#subcontent2
+						{
+							margin-right:200px;
+							margin-top:40px;
+							float:right;
+							width:700px;
+						}
+					#clear
+						{
+							clear:both;
+						}
+					#subcontent3
+						{
+							float:right;
+							margin-right:200px;
+							margin-top:30px;
+							background-color:#0072C6;
+							width:220px;
+							height:50px;
+							border-radius:10px;
+							text-align:center;
+						}
+					.campus
+						{
+							font-size:18px;
+							font-color:white;
+							font-family:Century Gothic;
+							margin-top:15px;
+						}
+					.campus:hover
+						{
+							font-color:white;
+						}
+					#subcontent4
+						{
+							float:right;
+							clear:right;
+							margin-right:170px;
+							margin-top:100px;
+						}
+					#subcontent5
+						{
+							clear:both;
+							width:100%;
+							min-width:1300px;
+							height:200px;
+
+							background:linear-gradient(#FFFFFF,#FDFDFD,#EFEFEF);
+						}
+					#footer
+						{
+							min-width:1300px;
+							margin: 0px auto;
+							width:100%;
+						}
+					#footer-group
+						{
+							position: relative;
+							margin: 0px auto;
+							width:90%;
+						}
+					#subfooter1
+						{
+							float:left;
+							margin-left:200px;
+							margin-bottom:20px;
+						}
+					#subfooter2
+						{
+							float:right;
+							margin-right:200px;
+							margin-bottom:20px;
+							color:grey;
+						}
+					.white-popup
+						{
+							  position: relative;
+							  background: #FFF;
+							  padding: 25px;
+							  width: auto;
+							  max-width: 400px;
+							  margin: 0 auto;
+						}
+					.white-popup2
+						{
+							  position: relative;
+							  background-color: #FFF;
+							  height:auto;
+							  width:750px;
+							  margin: 0 auto;
+							  padding:10px;
+							  border-radius:10px;
+						}
+					.white-popup1 
+						{
+							  position: relative;
+							  background: #FFF;
+							  padding: 25px;
+							  width: 250px;
+							  max-width: 400px;
+							  position:relative;
+							  left:70%;
+						}
+					#registerinput1
+						{
+							width:175px;
+							height:50px;
+						}
+						input 
+					{
+				        font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+				        font-size: 14px;
+				    }
+					input[type=text], input[type=password] 
+					{
+				        margin: 5px;
+						padding: 0 10px;
+						width: 200px;
+						height: 34px;
+						color: #404040;
+						background: white;
+						border: 0px solid;
+						border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+						border-radius: 4px;
+						outline:1px;
+						-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+						box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+				    }
+					input[type=text]:focus, input[type=password]:focus
+					{
+				       border-color:#FFB107;
+				       outline-color: #FFB107;
+				       outline-offset: 0;
+				       color: #404040;
+				    }
+				    #box9
+					{
+						margin-top:6px;
+						width:200px;
+						height:5px;
+						border-radius:10px;
+						background-color:#A23833;
+					}
+					
+				.photo
+						{
+							padding:30px;
+							float:right;
+						}
+				 #lo
+				 {
+				  font-family:'Lucida Grande', Tahoma, Verdana, sans-serif;
+				  font-size:20px;
+				  position:relative;
+				  color:#D2432B;
+				   left:8px;
+				 }
+						 #box2
+				 {
+				   height:2px;
+				   background-color:#D2432B;
+				   width:200px;
+				   border-radius:4px;
+				    position:relative;
+				   left:8px; 
+				 }
+				#submit1
+				{
+				  background-color: #E9C11F;
+				  border: 1px solid #E9C11F;
+				border-bottom: 1px solid #E9C11F;
+				border-radius: 3px;
+				color: white;
+				font-weight: bold;
+				padding: 6px 15px;
+				text-align: center;
+				text-shadow: 0 -1px 0 #396715;
+				font-size: 18px;
+				font-family: play, Times, "Play", serif;
+				}
+				#submit1:hover {
+				opacity: .85;
+				cursor: pointer;
+				}
+				/* 
+
+				====== Zoom-out effect ======
+
+				*/
+				.mfp-zoom-out {
+				  /* start state */
+				  /* animate in */
+				  /* animate out */
+				}
+				.mfp-zoom-out .mfp-with-anim {
+				  opacity: 0;
+				  transition: all 0.3s ease-in-out;
+				  transform: scale(1.3);
+				}
+				.mfp-zoom-out.mfp-bg {
+				  opacity: 0;
+				  transition: all 0.3s ease-out;
+				}
+				.mfp-zoom-out.mfp-ready .mfp-with-anim {
+				  opacity: 1;
+				  transform: scale(1);
+				}
+				.mfp-zoom-out.mfp-ready.mfp-bg {
+				  opacity: 0.8;
+				}
+				.mfp-zoom-out.mfp-removing .mfp-with-anim {
+				  transform: scale(1.3);
+				  opacity: 0;
+				}
+				.mfp-zoom-out.mfp-removing.mfp-bg {
+				  opacity: 0;
+				}
+				/* 
+
+				====== 3d unfold ======
+
+				*/
+				.mfp-3d-unfold {
+				  /* start state */
+				  /* animate in */
+				  /* animate out */
+				}
+				.mfp-3d-unfold .mfp-content {
+				  perspective: 2000px;
+				}
+				.mfp-3d-unfold .mfp-with-anim {
+				  opacity: 0;
+				  transition: all 0.3s ease-in-out;
+				  transform-style: preserve-3d;
+				  transform: rotateY(-60deg);
+				}
+				.mfp-3d-unfold.mfp-bg {
+				  opacity: 0;
+				  transition: all 0.5s;
+				}
+				.mfp-3d-unfold.mfp-ready .mfp-with-anim {
+				  opacity: 1;
+				  transform: rotateY(0deg);
+				}
+				.mfp-3d-unfold.mfp-ready.mfp-bg {
+				  opacity: 0.8;
+				}
+				.mfp-3d-unfold.mfp-removing .mfp-with-anim {
+				  transform: rotateY(60deg);
+				  opacity: 0;
+				}
+				.mfp-3d-unfold.mfp-removing.mfp-bg {
+				  opacity: 0;
+				}
+				/* 
+
+				====== Move-from-top effect ======
+
+				*/
+				.mfp-move-from-top {
+				  /* start state */
+				  /* animate in */
+				  /* animate out */
+				}
+				.mfp-move-from-top .mfp-content {
+				  vertical-align: top;
+				}
+				.mfp-move-from-top .mfp-with-anim {
+				  opacity: 0;
+				  transition: all 0.2s;
+				  transform: translateY(-100px);
+				}
+				.mfp-move-from-top.mfp-bg {
+				  opacity: 0;
+				  transition: all 0.2s;
+				}
+				.mfp-move-from-top.mfp-ready .mfp-with-anim {
+				  opacity: 1;
+				  transform: translateY(0);
+				}
+				.mfp-move-from-top.mfp-ready.mfp-bg {
+				  opacity: 0.8;
+				}
+				.mfp-move-from-top.mfp-removing .mfp-with-anim {
+				  transform: translateY(-50px);
+				  opacity: 0;
+				}
+				.mfp-move-from-top.mfp-removing.mfp-bg {
+				  opacity: 0;
+				}
+
+	</style>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<div id="header">
+		<div id='header-group'>
+		<div id="subheader1">
+			<a href="#"><img src="cy.jpg" height="100" width="200"></a>
+		</div>
+		<div id="subheader2">
+			<a href="https://www.facebook.com/yourselfchange"><img src="fb.png"></a>
+<!--			<a href="#"><img src="g.png"></a>
+			
+			<a href="#"><img src="yt.png"></a> -->
+			<a href="#"><img src="tw.png"></a>
+		</div>
+		<div id="subheader3">
+			
+			<a href="index.html" class="link">Home</a>
+			<a href="aboutus.html" class="link">About Us</a>
+			<a href="events.html" class="link">Events</a>
+			<a href="#" class="link"></a>
+			<a href="#" class="link" style="margin-right:5px;"></a>
+			<div  id="inline-popups1" class="link2">   
+				<a href="#contact" data-effect="mfp-3d-unfold" class="link">Contact</a>
+			</div>
+			<div id="inline-popups3"class="link3">
+				<a href="#register" data-effect="mfp-move-from-top" class="link" style = "color:black">Register</a>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div id="strip"></div>
+		<div id="image">
+			<div id="image-group">
+				<div id="wrapper">
+			        <div class="slider-wrapper theme-default">
+			           <div id="slider" class="nivoSlider">
+			            	<img src="cy_main.jpg" data-thumb="walle.jpg" alt="" height="" />
+			                <img src="x1.jpg" data-thumb="x1.jpg" alt="" />
+			           <!--     <img src="up.jpg" data-thumb="up.jpg" alt=""  />
+			                
+			                <img src="nemo.jpg" data-thumb="nemo.jpg" alt=""  />   -->
+			            </div>
+			        </div>
+	       		</div>
+	    	</div>
+		</div>
+	<div id="strip1"></div>
+	<div id="strip2"></div>
+	<div id="content">
+	<div id="content-group">
+		<div ID="clear">
+			<div id="subcontent1">
+				<h4>About AISAT</h4>
+			</div>
+			<div id="subcontent2">
+				<p>AISAT(All India Student Aptitude Test) was started last year with a vision of helping the students in identifing their natural tendencies through a systematic eveluation test of their aptitude</p>
+				<p>The exam is conducted in Two Levels:-</p>
+				<ul><p>
+					For Students from 6th to 10th- It will be a one hour exam and will have questions from Verbal
+					Reaoning, Legal Reasoning, Quantitaive aptitude ,General Awarness and Scientific Aptitude.<br>
+					The aim of this test will be to help in indentifying the career option which will be the best for them to opt according to their aptitude.</p>
+					</ul>
+					<ul>
+					<p>
+						For Students from 11th to 12th- It will be a Three hour exam and will have questions on entirely PCM/PCB. The aim of this exam will be- 
+						</p>
+					</ul>
+					
+					<li>
+					<p>
+						To act as a bridge between their orutine main stream syllabus and the competitive exams they are going to give in the future.
+					</p>
+					</li>
+					<li>
+					<p>
+						To inculcate scientific aptitude and critical thinking among the students to prepare them for all types of exams they are going to face after their 10+2.
+					</p>
+					</li>
+					<li>
+					<p>
+						To let them know their strengths and weakness and the areas they need to work upon.
+					</p></li>
+					<li>
+					<p>
+						To give them a feel of the questions whichare asked in the competitive exams and how they differ from those asked in Board examinations.</p>
+					</li>
+				<ul><p>
+					For 6th to 10th Class students, the fee of AISAT is Rs.100 and for 11th and 12th Class Students, the fee if AISAT is Rs. 200.</p>
+				</ul>
+				<ul><p>
+					A salient feature of AISAT is that we will provide an analysis Report to the candidates on the basiss of their differnt abilities.</p>
+				</ul>
+				<ul><p>
+					The questions will stress more on reasoning and critical thinking rather than subject knowledge</p>
+				</ul>
+
+			 <div >
+				<p ><strong><a href="https://attachment.fbsbx.com/file_download.html?id=1444724775748374&eid=ASsHRNQos2qbEBOfhQ8g3mDX2hG12xipod1KToB0XnPT0eIxY-sDGjokgptduWr_8lQ&inline=1&ext=1386915502&hash=AStcpl8svsd3t9l7"  >Click Here</a></strong> to download the broucher</p>
+
+				<p ><strong><a href="https://docs.google.com/file/d/0B_QOUO-HUUDyZUFmcFVBRFJIM28/edit"  >Click Here</a></strong> to download the Registration form</p>
+			</div>
+			</div>
+
+		</div>
+		
+		
+		
+	</div>
+	</div>
+
+		
+
+	<br><br><br><br><br>
+	<div id="subcontent5">
+	</div>
+	<div id="footer">
+		<div id="footer-group">
+		<div id="subfooter1">
+			<a href="index.html" class="link">Home</a>
+			<a href="aboutus.html" class="link">About Us</a>
+			<a href="#" class="link">Events</a>
+			<a href="#" class="link"></a>
+			<div  id="inline-popups4" class="link2">
+				<a href="#contact" data-effect="mfp-3d-unfold" class="link">Contact</a>
+			</div>
+			<div id="inline-popups5"class="link3">
+				<a href="#register" data-effect="mfp-move-from-top" class="link" style = "color:white">Register</a>
+			</div>
+		</div>
+		<div id="subfooter2">
+			<p>&copy copyright Change Yourself</p>
+		</div>
+		</div>
+	</div>
+	
+
+
+
+<div id="campuss" class="white-popup mfp-with-anim mfp-hide">You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</div>
+<div id="contact" class="white-popup2 mfp-with-anim mfp-hide">
+	<div id="contacts3">
+				<h4>Contacts</h4>
+				<div id="box9"></div>
+				<table>
+					<tr style="text-align:center;">
+					<td class="photo">
+						<img src="srinath.jpg" class="circle">
+						<h4>Srinath Chowdary</h4>
+						<p>ksrinathchowdary9@gmail.com</p>
+						<p>09002307962</p>
+					</td>
+					<td class="photo">
+						<img src="vamsi.jpg" class="circle">
+						<h4>Vamsi Krishna</h4>
+						<p>halavathvamsikrishna@gmail.com</p>
+						<p>08985754086</p>
+					</td>
+					
+					</tr>
+				</table>
+	</div>
+</div>
+<div id="register" class="white-popup1 mfp-with-anim mfp-hide">
+	<span id="lo">Register</span>
+	<div id="box2"></div>
+	<form action="register.html" method="post">
+		<input type="text"  class="rule"  name="username" id="username" placeholder="Enter Username"/><br/>
+		<input type="password"  class="rule"  name="Emailid" id="password" placeholder="Enter Emailid"/><br/>
+<!--		<button id="submit1">Signin</button>         -->
+		<input type="submit" value="Sign in">
+	</form>
+</div>
+ <script src='http://dimsemenov-static.s3.amazonaws.com/dist/jquery.magnific-popup.min.js'></script>
+   <script src="index.js"></script>
+  
+</body>
+</html>
